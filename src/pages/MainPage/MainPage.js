@@ -5,7 +5,7 @@ import './MainPage.scss';
 
 const MainPage = () => {
   return (
-    <div className='main-page'>
+    <div className="main-page">
       <Content />
     </div>
   );

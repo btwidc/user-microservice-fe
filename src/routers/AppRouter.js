@@ -11,7 +11,7 @@ const AppRouter = () => {
       {mainRoutes.map(({ path, Component }) => (
         <Route key={path} path={path} element={<Component />} />
       ))}
-      <Route path='*' element={<Departments />} />
+      <Route path="*" element={<Departments />} />
     </Routes>
   );
 };

@@ -29,11 +29,11 @@ const Departments = () => {
   return (
     <>
       <ContentHeader
-        headerTitle='Departments'
-        buttonTitle='Add'
+        headerTitle="Departments"
+        buttonTitle="Add"
         onClickButton={navigateToDepartmentForm}
       />
-      <div className='content__body content__body_departments'>
+      <div className="content__body content__body_departments">
         {departmentsList?.map((department) => (
           <DepartmentCard
             key={department?.id}

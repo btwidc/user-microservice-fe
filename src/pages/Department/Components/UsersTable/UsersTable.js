@@ -25,34 +25,34 @@ const columns = [
   },
 ];
 
-const UsersTable = ({users}) => {
+const UsersTable = ({ users }) => {
   return (
-      <DataGrid
-        sx={{
-          width: '60%',
-          height: 420,
-          border: '2px solid #1F1B9D',
+    <DataGrid
+      sx={{
+        width: '60%',
+        height: 420,
+        border: '2px solid #1F1B9D',
+        color: '#1F1B9D',
+        '& .MuiDataGrid-columnHeader': {
+          fontSize: '20px',
+        },
+        '& .MuiDataGrid-row': {
+          fontSize: '17px',
+        },
+        '& .MuiDataGrid-row:hover': {
+          backgroundColor: '#B0C1D9',
+        },
+        '& .MuiTablePagination-displayedRows': {
           color: '#1F1B9D',
-          '& .MuiDataGrid-columnHeader': {
-            fontSize: '20px',
-          },
-          '& .MuiDataGrid-row': {
-            fontSize: '17px',
-          },
-          '& .MuiDataGrid-row:hover': {
-            backgroundColor: '#B0C1D9',
-          },
-          '& .MuiTablePagination-displayedRows': {
-            color: '#1F1B9D',
-            fontSize: '16px',
-          },
-        }}
-        rows={users}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        disableSelectionOnClick
-      />
+          fontSize: '16px',
+        },
+      }}
+      rows={users}
+      columns={columns}
+      pageSize={5}
+      rowsPerPageOptions={[5]}
+      disableSelectionOnClick
+    />
   );
 };
 

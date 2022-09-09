@@ -46,9 +46,7 @@ export const createDepartmentAction = (name) => {
       dispatch({
         type: DEPARTMENT_ACTIONS_TYPES.CREATE_DEPARTMENT_ACTION,
       });
-      const newDepartment = await DepartmentService.createDepartment(
-        name,
-      );
+      const newDepartment = await DepartmentService.createDepartment(name);
       dispatch({
         type: DEPARTMENT_ACTIONS_TYPES.CREATE_DEPARTMENT_SUCCESS,
         payload: newDepartment.data,

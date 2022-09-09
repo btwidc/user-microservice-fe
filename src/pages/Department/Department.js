@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { getDepartmentAction, deleteDepartmentAction } from '../../store/actions/departmentActions';
+import {
+  getDepartmentAction,
+  deleteDepartmentAction,
+} from '../../store/actions/departmentActions';
 
 import { useNavigate, useParams } from 'react-router-dom';
 import { DEPARTMENTS_ROUTE } from '../../routes/routesPaths';
@@ -30,14 +33,15 @@ const Department = () => {
     <>
       <ContentHeader
         headerTitle={department?.name}
-        buttonTitle='Delete'
+        buttonTitle="Delete"
         onClickButton={deleteDepartment}
       />
-      <div className='content__body content__body_department'>
-        {department?.users ?
+      <div className="content__body content__body_department">
+        {department?.users ? (
           <DepartmentUsers users={department?.users} />
-            :
-          <DepartmentUsers users={[]} />}
+        ) : (
+          <DepartmentUsers users={[]} />
+        )}
       </div>
     </>
   );
