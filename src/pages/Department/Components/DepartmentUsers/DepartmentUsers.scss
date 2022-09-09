@@ -1,0 +1,11 @@
+.department-users {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__body {
+  }
+}
