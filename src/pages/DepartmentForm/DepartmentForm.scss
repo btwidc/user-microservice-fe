@@ -1,5 +1,10 @@
 .content__body_department_form {
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+
+  .error-message {
+    font-size: 26px;
+    font-weight: 500;
+    color: #FF0000;
+    margin-bottom: 20px;
+  }
 }

@@ -2,21 +2,17 @@ import React from 'react';
 
 import './FormInput.scss';
 
-const FormInput = ({ id, labelName, type, placeholder, value, onChange }) => {
+const FormInput = ({ id, type, labelName, placeholder, register, validation }) => {
   return (
-    <div className="form-input">
-      <div className="form-input__label">
-        <label htmlFor={id}>{labelName}</label>
-      </div>
-      <div className="form-input__field">
+    <div className='form-input'>
+      <label>
+        {labelName}
         <input
           type={type}
-          id={id}
           placeholder={placeholder}
-          value={value}
-          onChange={onChange}
+          {...register(id, validation)}
         />
-      </div>
+      </label>
     </div>
   );
 };

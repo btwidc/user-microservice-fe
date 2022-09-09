@@ -1,18 +1,14 @@
 .form-input {
   width: 25%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
-  &__label {
-    label {
-      cursor: pointer;
-      padding-left: 10px;
-      font-size: 26px;
-      font-weight: 500;
-      color: var(--text-color);
-    }
-  }
+  label {
+    cursor: pointer;
+    padding-left: 10px;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--text-color);
 
-  &__field {
     input {
       display: block;
       width: 100%;

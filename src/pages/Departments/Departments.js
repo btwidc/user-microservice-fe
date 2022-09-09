@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { getDepartmentsAction } from '../../store/actions/departmentActions';
 
 import { useNavigate } from 'react-router-dom';
 import { DEPARTMENT_FORM_ROUTE } from '../../routes/routesPaths';
@@ -8,11 +11,20 @@ import DepartmentCard from './Components/DepartmentCard/DepartmentCard';
 import './Departments.scss';
 
 const Departments = () => {
+  const { departmentsList, department } = useSelector(
+    (state) => state.department,
+  );
+
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const navigateToDepartmentForm = () => {
     navigate(DEPARTMENT_FORM_ROUTE);
   };
+
+  useEffect(() => {
+    dispatch(getDepartmentsAction());
+  }, [department]);
 
   return (
     <>
@@ -22,18 +34,13 @@ const Departments = () => {
         onClickButton={navigateToDepartmentForm}
       />
       <div className='content__body content__body_departments'>
-        <DepartmentCard
-          id={1}
-          name='Front-end'
-        />
-        <DepartmentCard
-          id={1}
-          name='Front-end'
-        />
-        <DepartmentCard
-          id={1}
-          name='Front-end'
-        />
+        {departmentsList?.map((department) => (
+          <DepartmentCard
+            key={department?.id}
+            id={department?.id}
+            name={department?.name}
+          />
+        ))}
       </div>
     </>
   );
