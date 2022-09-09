@@ -1,0 +1,28 @@
+.department-card {
+  width: 28%;
+  height: 90px;
+  margin: 30px;
+  border: var(--department-card-border);
+  border-radius: var(--department-card-border-radius);
+  background-color: var(--button-bg-color);
+
+  &:hover {
+    background-color: var(--button-hover-bg-color);
+
+    h3 {
+      color: var(--button-hover-text-color);
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    .department-card__body {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
