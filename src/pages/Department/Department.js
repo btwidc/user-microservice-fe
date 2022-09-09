@@ -15,7 +15,7 @@ import './Department.scss';
 
 const Department = () => {
   const { department } = useSelector((state) => state.department);
-  console.log(department);
+
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
